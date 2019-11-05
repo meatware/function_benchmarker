@@ -1,13 +1,8 @@
 import os
 import sys
-import time
 import logging
 import inspect
 import importlib
-import time
-import random
-import statistics
-#
 
 LOG = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
@@ -50,4 +45,3 @@ def _import_func_defs(graphdef_files):
 def load(dirname):
     _func_def_files = _get_def_files(dirname)
     return _import_func_defs(_func_def_files)
-

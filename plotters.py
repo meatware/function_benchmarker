@@ -1,10 +1,6 @@
 import sys
 import logging
-import matplotlib
-#matplotlib.use("agg")
 import matplotlib.pyplot as plt
-import matplotlib.patheffects as pe
-import matplotlib.dates as mdates
 from matplotlib import rcParams
 from pylab import figure
 
@@ -45,7 +41,6 @@ def plot_graphs(graph_data_dic):
     """Plot bar graphs with error bars."""
 
     y_vals_keys = ["median_li", "mean_li"]
-    x_axis = graph_data_dic["fn_li"]
 
     for y_key in y_vals_keys:
         fig_name = y_key + ".png"

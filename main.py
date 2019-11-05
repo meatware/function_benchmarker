@@ -19,7 +19,3 @@ if __name__ == "__main__":
 
     # plot graphs
     plot_graphs(graph_data_dic=graph_data_dic)
-
-
-
-

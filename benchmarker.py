@@ -1,3 +1,5 @@
+"""Run benchmarks."""
+
 import os
 import sys
 import time
@@ -12,6 +14,7 @@ LOG = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 
 def benchmark(func_dic, *arg_list):
+    """Run benchmarks on functions stored in a dictionary."""
     #functions = func1, func2
     # times = {f.__name__: [] for f in functions}
 
