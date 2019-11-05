@@ -15,8 +15,6 @@ logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 
 def benchmark(func_dic, *arg_list):
     """Run benchmarks on functions stored in a dictionary."""
-    #functions = func1, func2
-    # times = {f.__name__: [] for f in functions}
 
     func_names = [func_name for func_name, _ in func_dic.items()]
     timing_dict = {func_name: [] for func_name, _ in func_dic.items()}
@@ -38,6 +36,7 @@ def benchmark(func_dic, *arg_list):
         timing_dict[chosen_func].append((t1 - t0) * 1000)
     print("\nFine-tuning\n")
 
+    # TODO: Implement fine tuning so all functions have same no of N iterations
     fine_tune_funcs = {}
     for func_name, numbers in timing_dict.items():
         coarse_len = len(numbers)
